@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Student Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('form-bg.jpg') no-repeat center center/cover;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      height: 100vh;
+      display: flex;
+      justify-content: center;   /* center horizontally */
+      align-items: center;       /* center vertically */
+    }
+
+    .form-card {
+      width: 350px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <!-- Navbar -->
+  <div class="position-absolute top-0 start-0 m-3">
+    <a href="index.php" class="btn btn-dark">
+      <i class="bi bi-arrow-left"></i> Dashboard
+    </a>
+  </div>
+
+  <div class="position-absolute top-0 end-0 m-3">
+    <a href="logout.php" class="btn btn-danger">Logout</a>
+  </div>
+
+  <!-- FORM CENTER -->
+  <div class="form-card shadow">
+
+    <h3 class="text-center mb-4">
+      🎓 Add Result
+    </h3>
+
+    <form action="process.php" method="POST">
+
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-person"></i></span>
+        <input type="text" name="name" class="form-control" placeholder="Student Name" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-book"></i></span>
+        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-bar-chart"></i></span>
+        <input type="number" id="marks" name="marks" class="form-control" placeholder="Marks" required oninput="generateGrade()">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text"><i class="bi bi-award"></i></span>
+        <input type="text" id="grade" name="grade" class="form-control" placeholder="Grade" readonly>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        Submit Result
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script>
+function calculateGrade(marks) {
+    if (marks >= 90) return "A+";
+    else if (marks >= 80) return "A";
+    else if (marks >= 60) return "B";
+    else if (marks >= 50) return "C";
+    else if (marks >= 35) return "D";
+    else return "F";
+}
+
+function generateGrade() {
+    let marks = document.getElementById("marks").value;
+
+    if (marks === "") {
+        document.getElementById("grade").value = "";
+        return;
+    }
+
+    document.getElementById("grade").value = calculateGrade(parseFloat(marks));
+}
+</script>
+
+</body>
+</html>

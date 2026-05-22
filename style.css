@@ -1,0 +1,100 @@
+/* Page Background */
+body {
+  background: linear-gradient(135deg, #5f2c82, #49a09d);
+}
+
+.custom-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+}
+
+.table-dark {
+  background: linear-gradient(to right, #5f2c82, #49a09d);
+}
+
+/* Card Design */
+.card {
+  border-radius: 20px;
+  transition: 0.3s;
+  border: none;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Input Styling */
+.form-control {
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Input Hover */
+.form-control:hover {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.5);
+}
+
+/* Input Focus (VERY IMPORTANT) */
+.form-control:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 10px rgba(118,75,162,0.7);
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Common Hover */
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Primary Button (Submit) */
+.btn-primary {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Edit button */
+.edit-btn:hover {
+  background-color: #146c43;
+}
+
+/* Delete button */
+.delete-btn:hover {
+  background-color: #b02a37;
+}
+
+/* Update button */
+.update-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Table row hover effect */
+.table tbody tr:hover {
+  background-color: rgba(95, 44, 130, 0.1);
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #5f2c82, #49a09d);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 15px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+}
