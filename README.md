@@ -266,16 +266,20 @@ http://localhost/result-management/
 - Dashboard Cards
 - Student Table
 - Search & Filter System
+<img width="1910" height="1448" alt="screencapture-localhost-result-management-index-php-2026-05-23-21_29_15" src="https://github.com/user-attachments/assets/c71feeaa-df72-4ac6-887d-fc49f9b07ead" />
+
 
 ## Add Result Form
 - Dynamic Grade Generation
 - Subject Dropdown
+<img width="1910" height="1035" alt="screencapture-localhost-result-management-form-html-2026-05-23-21_30_29" src="https://github.com/user-attachments/assets/48ceca2c-a702-42eb-be1c-b0c344c13dca" />
+
 
 ## Authentication
 - Login Page
 - Signup Page
+<img width="1910" height="1035" alt="screencapture-localhost-result-management-login-php-2026-05-23-21_30_58" src="https://github.com/user-attachments/assets/208797cb-b97a-4460-abd5-d90db130e631" />
 
-(Add screenshots later)
 
 ---
 
@@ -295,19 +299,6 @@ The dashboard supports:
 - Subject Filtering
 - Dynamic Sorting
 - Real-Time Result Display
-
----
-
-# 📈 Future Enhancements
-
-- Student Portal
-- Email Notifications
-- Role-Based Authentication
-- Data Visualization Charts
-- Dark Mode
-- Pagination
-- Excel Export
-- Attendance Management
 
 ---
 
