@@ -1,4 +1,4 @@
-# 🎓 Result Management System
+# 🎓 Student Result Analysis & Management System
 
 ![PHP](https://img.shields.io/badge/PHP-8.x-blue?style=for-the-badge&logo=php)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql)
@@ -11,7 +11,7 @@
 
 # 📌 Project Overview
 
-The **Result Management System** is a web-based academic management application developed using **PHP, MySQL, Bootstrap, HTML, CSS, and JavaScript**.
+The **Student Result Analysis & Management System** is a web-based academic management application developed using **PHP, MySQL, Bootstrap, HTML, CSS, and JavaScript**.
 
 This system allows administrators to efficiently manage student academic records through a modern dashboard interface.
 
