@@ -20,6 +20,20 @@ if ($result->num_rows > 0) {
 }
 ?>
 
+<?php
+
+include 'db.php';
+
+$id = $_GET['id'];
+
+$result = $conn->query(
+    "SELECT * FROM students WHERE id=$id"
+);
+
+$row = $result->fetch_assoc();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -93,10 +107,46 @@ if ($result->num_rows > 0) {
 
       <!-- Subject -->
       <div class="input-group mb-3">
-        <span class="input-group-text"><i class="bi bi-book"></i></span>
-        <input type="text" name="subject" class="form-control"
-        value="<?php echo isset($data['subject']) ? $data['subject'] : ''; ?>" required>
-      </div>
+
+  <span class="input-group-text">
+    <i class="bi bi-book"></i>
+  </span>
+
+  <select name="subject" class="form-control">
+
+    <option value="Java"
+    <?php if($row['subject']=="Java") echo "selected"; ?>>
+    Java
+    </option>
+
+    <option value="DBMS"
+    <?php if($row['subject']=="DBMS") echo "selected"; ?>>
+    DBMS
+    </option>
+
+    <option value="OS"
+    <?php if($row['subject']=="OS") echo "selected"; ?>>
+    Operating System
+    </option>
+
+    <option value="CN"
+    <?php if($row['subject']=="CN") echo "selected"; ?>>
+    Computer Networks
+    </option>
+
+    <option value="DSA"
+    <?php if($row['subject']=="DSA") echo "selected"; ?>>
+    DSA
+    </option>
+
+    <option value="Python"
+    <?php if($row['subject']=="Python") echo "selected"; ?>>
+    Python
+    </option>
+
+  </select>
+
+</div>
 
       <!-- Marks -->
       <div class="input-group mb-3">

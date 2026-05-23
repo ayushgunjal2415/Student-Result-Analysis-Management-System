@@ -22,8 +22,8 @@
       background: rgba(0,0,0,0.6);
       height: 100vh;
       display: flex;
-      justify-content: center;   /* center horizontally */
-      align-items: center;       /* center vertically */
+      justify-content: center;
+      align-items: center;
     }
 
     .form-card {
@@ -34,6 +34,8 @@
       padding: 25px;
     }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -66,8 +68,19 @@
       </div>
 
       <div class="input-group mb-3">
-        <span class="input-group-text"><i class="bi bi-book"></i></span>
-        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+        <span class="input-group-text">
+          <i class="bi bi-book"></i>
+        </span>
+
+        <select name="subject" class="form-control" required>
+          <option value="">Select Subject</option>
+          <option value="Java">Java</option>
+          <option value="DBMS">DBMS</option>
+          <option value="OS">OS</option>
+          <option value="CN">CN</option>
+          <option value="DSA">DSA</option>
+          <option value="Python">Python</option>
+        </select>
       </div>
 
       <div class="input-group mb-3">
@@ -92,11 +105,12 @@
 
 <script>
 function calculateGrade(marks) {
-    if (marks >= 90) return "A+";
-    else if (marks >= 80) return "A";
+    if (marks >= 90) return "O";
+    else if (marks >= 80) return "A+";
+    else if (marks >= 70) return "A";
     else if (marks >= 60) return "B";
     else if (marks >= 50) return "C";
-    else if (marks >= 35) return "D";
+    else if (marks >= 40) return "D";
     else return "F";
 }
 
@@ -110,7 +124,12 @@ function generateGrade() {
 
     document.getElementById("grade").value = calculateGrade(parseFloat(marks));
 }
+
+
 </script>
 
+
+
 </body>
+
 </html>
