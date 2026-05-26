@@ -266,7 +266,8 @@ http://localhost/result-management/
 - Dashboard Cards
 - Student Table
 - Search & Filter System
-<img width="1910" height="1448" alt="screencapture-localhost-result-management-index-php-2026-05-23-21_29_15" src="https://github.com/user-attachments/assets/c71feeaa-df72-4ac6-887d-fc49f9b07ead" />
+<img width="1910" height="1448" alt="screencapture-localhost-result-management-index-php-2026-05-26-21_07_20" src="https://github.com/user-attachments/assets/405cd62a-7975-4419-bf04-8010cedc911f" />
+
 
 
 ## Add Result Form
